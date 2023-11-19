@@ -1,0 +1,64 @@
+  body {
+      background-color: rgb(44, 42, 42);
+  }
+
+  .calButton {
+      background-color: burlywood;
+      border: none;
+      color: white;
+      /* width: 52px;
+    height: 34px; */
+      border-radius: 10px;
+      cursor: pointer;
+  }
+
+  .calButton:hover {
+      background-color: beige;
+      color: black;
+  }
+
+  .operatorButton {
+      background-color: rgb(207, 204, 204);
+      border: none;
+      color: black;
+      /* width: 52px;
+    height: 30px; */
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  .operatorButton:hover {
+      background-color: burlywood;
+      color: white;
+  }
+
+  .calButton,
+  .operatorButton {
+      width: 150px;
+      height: 62px;
+  }
+
+  .display {
+      /* background-color: black; */
+      color: white;
+      height: 130px;
+      width: 46%;
+      margin-right: 50px;
+      margin-top: 50px;
+      border-radius: 5px;
+
+  }
+
+  .displayText {
+      color: white;
+      margin-bottom: 0px;
+      margin-left: 20px;
+      padding-top: 18px;
+      font-size: 50px;
+
+  }
+
+  .buttonsDiv {
+      margin-top: 7%;
+      /* margin-left: 65px; */
+  }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator project</title>
+
+    <!-- link to style sheet -->
+<link rel="stylesheet" href="calculator.css">
+<link rel="stylesheet" href="calculatorResponsive.css">
+
+</head>
+<body>
+    <!-- making the buttons! -->
+    <div class="buttonsDiv">
+        <div class="display">
+            <p class="displayText"></p>
+        </div>
+    <p class="calculator-p-tag">
+        <button class="calButton" onclick="calSelect1='';valueDisplay()">CA</button>
+        <button class="operatorButton" onclick="backSpace();">DEL</button>
+        <button class="operatorButton" onclick="calSelect1+='%'; valueDisplay()">%</button>
+        <button class="operatorButton" onclick="calSelect1+='/'; valueDisplay()" >/</button>
+    </p>
+    <p class="calculator-p-tag">
+        <button class="calButton" onclick="calSelect1+='7'; valueDisplay()">7</button>
+        <button class="calButton" onclick="calSelect1+='8'; valueDisplay()">8</button>
+        <button class="calButton" onclick="calSelect1+='9'; valueDisplay()">9</button>
+        <button class="operatorButton addOperator" onclick="calSelect1+='+'; valueDisplay() ">+</button>
+        
+    </p>
+    
+    <p class="calculator-p-tag">
+        <button class="calButton" onclick="calSelect1+='4'; valueDisplay()">4</button>
+        <button class="calButton" onclick="calSelect1+='5'; valueDisplay()">5</button>
+        <button class="calButton" onclick="calSelect1+='6'; valueDisplay()">6</button>
+        <button class="operatorButton" onclick="calSelect1+='-'; valueDisplay()">-</button>
+    </p>
+
+    <p class="calculator-p-tag">
+        <button class="calButton" onclick="calSelect1+='1'; valueDisplay();">1</button>
+        <button class="calButton" onclick="calSelect1+='2'; valueDisplay();">2</button>
+        <button class="calButton" onclick="calSelect1+='3';valueDisplay();">3</button>
+        <button class="operatorButton" onclick="calSelect1+='*'; valueDisplay()">x</button>
+        
+    </p>
+
+    <p class="calculator-p-tag">
+    <button class="operatorButton" onclick="calSelect1+='.'; valueDisplay()">.</button>
+    <button class="calButton" onclick="calSelect1+='0'; valueDisplay()">0</button>
+    <button class="operatorButton" onclick="calSelect1+='00'; valueDisplay()">00</button>
+   <button class="operatorButton" onclick="calSelect1=eval(calSelect1); valueDisplay()">=</button>
+    </p>
+</div>
+
+<script>
+    let calSelect1=[];
+ 
+    function valueDisplay() {
+            setTimeout( () => {
+            let text=calSelect1;
+            let genHtml=`<p>${text}</p>`;
+            document.querySelector('.displayText').innerHTML=genHtml;
+        }, 100);
+    }
+
+
+    function backSpace() {
+            if (calSelect1.length > 0) {
+                calSelect1 = calSelect1.slice(0, -1);
+            } else {
+                console.log('calSelect1 is empty. No elements to remove.');
+            }
+                valueDisplay();
+        }    
+</script>
+
+</body>
+</html>

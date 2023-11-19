@@ -1,0 +1,44 @@
+/* RESPONSIVE CSS MOBILE PHONE ONLY */
+@media(min-width: 375px) and (max-width:480px) {
+    .display {
+        background-color: rgb(44, 42, 42);
+        width: 90%;
+        height: 10rem;
+    }
+
+    .calButton,
+    .operatorButton {
+        width: 24%;
+        height: 3rem;
+    }
+
+    .operatorButton {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .displayText {
+        padding-top: 70px;
+        font-size: 2rem;
+    }
+
+    .buttonsDiv {
+        margin-left: 0%;
+        /* margin-top: 40%; */
+    }
+}
+
+/* TABLETS */
+@media (min-width:481px) and (max-width:645px) {
+
+    .calButton,
+    .operatorButton {
+        width: 20%;
+    }
+
+    .displayText {
+        padding-top: 70px;
+        font-size: 2rem;
+    }
+
+}
